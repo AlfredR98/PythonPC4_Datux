@@ -1,0 +1,3 @@
+En el ámbito del desarrollo de software, la colaboración es fundamental. La colaboración eficiente impulsa la eficacia y mejora la calidad del código. La calidad del código, a su vez, es esencial para la mentalidad del sistema. Mantener un sistema sin problemas es esencial para la satisfacción del cliente. La satisfacción del cliente, por supuesto, es un objetivo clave para cualquier equipo de desarrollo desarrollar estrategias para fomentar la colaboración continua y mejora la calidad del código es una práctica que beneficia a todos los miembros del equipo y contribuye al éxito general del proyecto.
+esto es una prueba para datux
+probando el manejo de archivos python
