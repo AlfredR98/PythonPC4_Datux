@@ -1,0 +1,5 @@
+log[2023-12-06 23:51:45.671914]-[-alfred_raico-creo un producto-Smartwatch ,200.0,10 ]
+log[2023-12-06 23:52:10.444879]-[-alfred_raico-listo los products]
+log[2023-12-06 23:52:36.748837]-[-alfred_raico-se actualizao un producto con id1]
+log[2023-12-06 23:52:50.946765]-[-alfred_raico-se elimino un producto con id1]
+log[2023-12-06 23:54:15.806179]-[-alfred_raico-se elimino un producto con id1]
