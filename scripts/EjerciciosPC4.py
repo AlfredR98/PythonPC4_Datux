@@ -21,7 +21,10 @@ print(f'\nLa palabra "la" se repite: \t{repetir} veces')
 Ejercicio 2
 '''
 import modulos.bd as bd
+import random
 from modulos.proceso import *
+from pyfiglet import Figlet
+figlet = Figlet()
 
 database=None
 def main():
@@ -33,6 +36,13 @@ def main():
             user=input("ingrese su nombre de usuario temporal: ") 
             init=False
             config() ## ejecutar las consideraciones basicas al iniciar la aplicacion
+            fuentes = Figlet().getFonts('')
+            fAleatoria = random.choice(fuentes)
+            figlet = Figlet(font=fAleatoria)
+            textoRandom = 'Hello, world'
+            ascii = figlet.renderText(textoRandom)
+            print(ascii)
+            
         opciones="""
         Bienvenidos a store DatuxTec
         1. Crear producto
@@ -59,7 +69,6 @@ def main():
 
 #funcion que configura la inicializacion de la aplicacion
 def config():
-
     database=bd.Bd()
     query_products="""
         CREATE TABLE  IF NOT EXISTS products (
@@ -71,7 +80,5 @@ def config():
     """
     database.execute_query(query_products)
 
-
 if __name__=='__main__':
     main()
-    
