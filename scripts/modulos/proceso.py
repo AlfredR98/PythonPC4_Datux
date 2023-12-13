@@ -72,7 +72,55 @@ def editar_nombre(user):
         loogeinfo=f"-{user}-error al actualizar EL PRODUCTO -{e}  "
         logger.register_log(loogeinfo)
 
+def editar_precio_producto(user):
+    print("actualizar precio producto ")
+    nomPro=input("ingrese el nombre del producto a actualizar: ")
+    nuevo_precio=input("ingrese el nuevo precio del producto: ")
+    query = f'''
+        UPDATE products
+        SET price = {nuevo_precio}
+        WHERE name like '%{nomPro}%';
+    '''
+    try:
+        BdIv2.execute_query(query)
+        loogeinfo=f"-{user}-se actualizó el precio del producto {nomPro}"
+        logger.register_log(loogeinfo)
+    except Exception as e:
+        loogeinfo=f"-{user}-error al actualizar el PRECIO del PRODUCTO -{e}  "
+        logger.register_log(loogeinfo)
+
+def editar_stock(user):
+    print("actualizar stock del producto ")
+    nomPro=input("ingrese el nombre del producto a actualizar: ")
+    nuevo_stock=input("ingrese el nuevo stock del producto: ")
+    print('id|nombre|price|stock')
+    query = f'''
+        UPDATE products
+        SET stock = {nuevo_stock}
+        WHERE name like '%{nomPro}%';
+    '''
+    try:
+        BdIv2.execute_query(query)
+        loogeinfo=f"-{user}-se actualizó el stock del producto {nomPro}"
+        logger.register_log(loogeinfo)
+    except Exception as e:
+        loogeinfo=f"-{user}-error al editar el stock del PRODUCTO -{e}  "
+        logger.register_log(loogeinfo)
 
 
-## en caso queremos hacer una busqeuda al final del select * from tabla se agrega 
-## la palabra where 
+def buscar_producto(user):
+    print("Busque el producto ")
+    nomPro=input("ingrese el nombre del producto a buscar: ")
+    print('id|nombre|price|stock')
+    try:
+        query=f"select * from products WHERE name like '%{nomPro}%'"
+        data=BdIv2.get_data(query)
+        for i in data:
+            print(i[0],i[1],i[2],i[3])
+        loogeinfo=f"-{user}-se encontró el producto {nomPro}"
+        logger.register_log(loogeinfo)
+    except Exception as e:
+        loogeinfo=f"-{user}-error al buscar el PRODUCTO -{e}  "
+        logger.register_log(loogeinfo)
+
+    
