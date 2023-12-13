@@ -1,7 +1,7 @@
 '''
 Ejercicio 1
 '''
-'''
+
 ruta_archivo = './scripts/software.txt'
 with open(ruta_archivo, mode = 'r+', encoding='utf-8') as file:
     data = file.read().lower()
@@ -16,7 +16,7 @@ with open(ruta_archivo, mode = 'r+', encoding='utf-8') as file:
     file.close()
 
 print(f'\nLa palabra "la" se repite: \t{repetir} veces')
-'''
+
 '''
 Ejercicio 2
 '''
